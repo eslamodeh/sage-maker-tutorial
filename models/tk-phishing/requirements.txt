@@ -4,3 +4,4 @@ scikit-learn
 joblib
 boto3
 sagemaker
+sentence_transformers
