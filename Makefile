@@ -7,9 +7,13 @@ build:
 	echo "Building image:"
 	docker build -t sagemaker-tf-phishing-serving . --no-cache;
 
+build_m1:
+	echo "Building image for m1:"
+	docker build -t sagemaker-tf-phishing-serving . -f DockerfileM1 --no-cache;
+
 run_bash:
 	echo "Running bash:"
-	docker run -it sagemaker-tf-phishing-serving /bin/bash
+	docker run --rm -p 8080:8080 sagemaker-tf-phishing-serving
 
 error:
 	@echo "Please choose one of the following target: build"
