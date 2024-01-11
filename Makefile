@@ -13,7 +13,7 @@ build_m1:
 
 run_bash:
 	echo "Running bash:"
-	docker run --rm -p 8080:8080 sagemaker-tf-phishing-serving
+	docker run --rm -d -p 8080:8080 sagemaker-tf-phishing-serving
 
 error:
 	@echo "Please choose one of the following target: build"

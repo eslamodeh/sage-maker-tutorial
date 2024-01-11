@@ -12,5 +12,5 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # starts NGINX and TF serving pointing to our model
 ENTRYPOINT service nginx start | tensorflow_model_server --rest_api_port=8501 \
- --model_name=phishing_v1 \
- --model_base_path=/saved_model_phishing_v1/data/phishing_classifier_simple.h5
+ --model_name=phishing \
+ --model_base_path=/saved_model_phishing_v1/model/phishing
